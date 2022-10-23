@@ -63,9 +63,10 @@ function menu.build(args)
     local after      = args.after or {}
     local skip_items = args.skip_items or {}
     local sub_menu   = args.sub_menu or false
+    local menu_width = args.width or 200
 
     local result     = {}
-    local _menu      = awful_menu({ items = before })
+    local _menu      = awful_menu({ items = before, theme = { width = menu_width } })
 
     menu_gen.generate(function(entries)
         -- Add category icons
