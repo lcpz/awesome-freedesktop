@@ -15,5 +15,9 @@ dependencies = {
 supported_platforms = { "linux" }
 build = {
    type = "builtin",
-   modules = { freedesktop = "init.lua" }
+   modules = {
+    ["freedesktop"] = "init.lua",
+    ["freedesktop.menu"] = "menu.lua",
+    ["freedesktop.desktop"] = "desktop.lua",
+   }
 }
